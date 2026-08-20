@@ -99,7 +99,8 @@ main{min-height:100vh}
 .hcar-dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2}
 .hcar-dots button{width:7px;height:7px;border-radius:50%;border:none;padding:0;background:rgba(31,28,25,.3);cursor:pointer;transition:.35s var(--ease)}
 .hcar-dots button.active{background:var(--ink);width:20px;border-radius:4px}
-.scroll-hint{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--ink-faint);opacity:0;animation:hFade 1s ease 1.7s forwards;display:flex;flex-direction:column;align-items:center;gap:9px}
+.scroll-hint{position:absolute;left:clamp(20px,5vw,64px);bottom:34px;font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--ink-faint);opacity:0;animation:hFade 1s ease 1.7s forwards;display:flex;flex-direction:column;align-items:flex-start;gap:9px}
+@media(max-width:960px){.scroll-hint{display:none}}
 .scroll-hint::after{content:'';width:1px;height:34px;background:linear-gradient(var(--ink-faint),transparent)}
 
 /* BIOGRAPHY */
@@ -328,7 +329,6 @@ footer small{color:var(--ink-faint);font-size:.78rem;letter-spacing:.05em}
         </div>
       </div>
     </div>
-    <div class="scroll-hint">Explore</div>
   </div>
 </section>
 
